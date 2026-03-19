@@ -1,0 +1,42 @@
+/* Star picker */
+.star-btn {
+    cursor: pointer !important;
+    transition: transform 0.1s;
+    user-select: none;
+}
+.star-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Movie card poster */
+.movie-poster-wrap {
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+    background: #f0f0f0;
+}
+.movie-poster-placeholder {
+    height: 280px;
+    background: #f0f0f0;
+}
+.poster-rating-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+.movie-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.movie-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+.movie-detail-poster {
+    min-height: 200px;
+    background: #f0f0f0;
+}
