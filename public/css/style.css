@@ -1,14 +1,16 @@
+/* ══════════════════════════════════════
+   MovieReviewHub — Global Styles
+══════════════════════════════════════ */
+
 /* Star picker */
 .star-btn {
     cursor: pointer !important;
     transition: transform 0.1s;
     user-select: none;
 }
-.star-btn:hover {
-    transform: scale(1.2);
-}
+.star-btn:hover { transform: scale(1.25); }
 
-/* Movie card poster */
+/* Movie card */
 .movie-poster-wrap {
     position: relative;
     overflow: hidden;
@@ -17,26 +19,67 @@
 }
 .movie-poster-placeholder {
     height: 280px;
-    background: #f0f0f0;
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
 }
 .poster-rating-badge {
     position: absolute;
     top: 8px;
     left: 8px;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.75);
     color: #fff;
-    padding: 3px 8px;
+    padding: 3px 10px;
     border-radius: 20px;
     font-size: 0.8rem;
+    backdrop-filter: blur(4px);
 }
 .movie-card {
     transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 12px !important;
+    overflow: hidden;
 }
 .movie-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18) !important;
 }
 .movie-detail-poster {
     min-height: 200px;
-    background: #f0f0f0;
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
+    border-radius: 12px;
 }
+
+/* Genre pill active state */
+.genre-pill.active {
+    box-shadow: 0 2px 8px rgba(255,193,7,0.4);
+}
+
+/* Smooth fade in for cards */
+.movie-item {
+    animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Review history text clamp */
+.review-text-preview {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Rounded cards */
+.card { border-radius: 12px; }
+
+/* Navbar brand hover */
+.navbar-brand:hover { opacity: 0.85; }
+
+/* Form controls - consistent radius */
+.form-control, .form-select, .input-group-text {
+    border-radius: 8px !important;
+}
+.input-group .form-control:not(:first-child) { border-radius: 0 8px 8px 0 !important; }
+.input-group .form-control:not(:last-child)  { border-radius: 8px 0 0 8px !important; }
+.input-group .input-group-text:first-child    { border-radius: 8px 0 0 8px !important; }
+.input-group .input-group-text:last-child     { border-radius: 0 8px 8px 0 !important; }
